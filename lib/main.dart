@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'screens/credits_page.dart'; // Importer la page des crédits
+import 'screens/quiz_page.dart'; // Importer l'écran des questions
 import 'theme/theme.dart'; // Importer le thème
 
 void main() {
@@ -41,21 +42,25 @@ class _MyAppState extends State<MyApp> {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                ElevatedButton(
-                  onPressed: _incrementCounter,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.play_arrow,
-                        color: Colors.white ),
-
-                      SizedBox(width: 10),
-                      Text(
-                        "Commencer la partie",
-                        style: TextStyle(color: Colors.white,
-                            fontWeight: FontWeight.bold), // Texte en blanc
-                      ),
-                    ],
+                Builder(
+                  builder: (context) => ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => QuizPage()),
+                      );
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.info, color: Colors.white,),
+                        SizedBox(width: 5),
+                        Text(
+                          "Commencer la partie",
+                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold), // Texte en blanc
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),

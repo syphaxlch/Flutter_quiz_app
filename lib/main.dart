@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quiz_game/models/db_connect.dart';
 import 'screens/credits_page.dart'; // Importer la page des crédits
 import 'screens/quiz_page.dart'; // Importer l'écran des questions
 import 'theme/theme.dart'; // Importer le thème

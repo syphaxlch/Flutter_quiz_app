@@ -1,0 +1,54 @@
+{
+  "questions": {
+    "q1": {
+      "question": "Quel est le capital de la France ?",
+      "options": ["Paris", "Londres", "Berlin", "Madrid"],
+      "correctAnswer": "Paris"
+    },
+    "q2": {
+      "question": "Combien de continents existe-t-il ?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "7"
+    },
+    "q3": {
+      "question": "Quelle est la plus grande planète du système solaire ?",
+      "options": ["Mars", "Jupiter", "Saturne", "Venus"],
+      "correctAnswer": "Jupiter"
+    },
+    "q4": {
+      "question": "Qui a écrit 'Les Misérables' ?",
+      "options": ["Victor Hugo", "Émile Zola", "Albert Camus", "Jean-Paul Sartre"],
+      "correctAnswer": "Victor Hugo"
+    },
+    "q5": {
+      "question": "En quelle année a eu lieu la Révolution française ?",
+      "options": ["1789", "1776", "1799", "1804"],
+      "correctAnswer": "1789"
+    },
+    "q6": {
+      "question": "Quel est l’élément chimique dont le symbole est O ?",
+      "options": ["Or", "Oxygène", "Osmium", "Oxalate"],
+      "correctAnswer": "Oxygène"
+    },
+    "q7": {
+      "question": "Quelle est la monnaie utilisée au Japon ?",
+      "options": ["Dollar", "Yuan", "Yen", "Won"],
+      "correctAnswer": "Yen"
+    },
+    "q8": {
+      "question": "Quel pays est surnommé le pays du soleil levant ?",
+      "options": ["Japon", "Chine", "Corée du Sud", "Thaïlande"],
+      "correctAnswer": "Japon"
+    },
+    "q9": {
+      "question": "Combien de joueurs composent une équipe de football sur le terrain ?",
+      "options": ["9", "10", "11", "12"],
+      "correctAnswer": "11"
+    },
+    "q10": {
+      "question": "Quel est le plus long fleuve du monde ?",
+      "options": ["Nil", "Amazon", "Yangzi Jiang", "Mississippi"],
+      "correctAnswer": "Amazon"
+    }
+  }
+}

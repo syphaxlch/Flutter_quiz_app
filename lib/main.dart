@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_game/models/db_connect.dart';
 import 'screens/credits_page.dart'; // Importer la page des crédits
 import 'screens/quiz_page.dart'; // Importer l'écran des questions
 import 'theme/theme.dart'; // Importer le thème
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int counter = -1;
+  AudioPlayer _audioPlayer = AudioPlayer();
 
   void _incrementCounter() {
     setState(() {
@@ -46,6 +47,7 @@ class _MyAppState extends State<MyApp> {
                 Builder(
                   builder: (context) => ElevatedButton(
                     onPressed: () {
+                      _audioPlayer.play(AssetSource('assets/game-start.mp3'));
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => QuizPage()),

@@ -15,6 +15,7 @@ class QuizPage extends StatefulWidget {
 class _QuizScreenState extends State<QuizPage> {
   int _currentQuestionIndex = 0;
   int _score = 0; // Variable pour suivre le score
+  int current = 1; // Variable pour suivre le numero de question
   late Future<List<Question>> _questionsFuture;
   Map<String, Color> _buttonColors = {}; // Dictionnaire pour suivre la couleur de chaque bouton
   bool _isAnswered = false; // Variable pour savoir si une réponse a été choisie
@@ -42,10 +43,11 @@ class _QuizScreenState extends State<QuizPage> {
       }
     });
   }
-
+  int questionsLength=0;
   // Fonction pour passer à la question suivante
   void _nextQuestion(List<Question> questions) {
     setState(() {
+      questionsLength = questions.length;
       if (_currentQuestionIndex < questions.length - 1) {
         _currentQuestionIndex++;
         _isAnswered = false; // Réinitialiser le statut de la réponse
@@ -54,9 +56,25 @@ class _QuizScreenState extends State<QuizPage> {
         showDialog(
           context: context,
           builder: (_) => AlertDialog(
-            title: Text('Félicitations!',
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.green)),
-            content: Text('Vous avez terminé le quiz. Votre score est $_score / ${questions.length}.',
+            title:
+            _score > 4
+                ? Text(
+              'Félicitations!',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+            )
+                : Text(
+              'ÉCHEC!',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            content: Text('Vous avez terminé le quiz. Votre score est ${_score*10 } %.',
                 style: TextStyle(fontSize: 18)),
             actions: [
               ElevatedButton(
@@ -111,7 +129,7 @@ class _QuizScreenState extends State<QuizPage> {
               ),
               SizedBox(height: 8),
               Text(
-                'Votre score est $_score / $_currentQuestionIndex.',
+                'Votre score est ${_score*10 } %',
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(height: 20),
@@ -171,7 +189,7 @@ class _QuizScreenState extends State<QuizPage> {
                     children: [
                       // Affichage du score avant la question
                       Text(
-                        'Score: $_score / ${questions.length}',
+                        '$current / ${questions.length+1}',
                         style: TextStyle(fontSize: 44, fontWeight: FontWeight.bold, color: Colors.green[700]),
                       ),
                       SizedBox(height: 40),
@@ -196,6 +214,7 @@ class _QuizScreenState extends State<QuizPage> {
                           onPressed: _isAnswered
                               ? () {} // Fonction vide pour désactiver le bouton
                               : () {
+                            current++;
                             // Vérifier si l'option est correcte
                             if (option == currentQuestion.correctAnswer) {
                               setState(() {

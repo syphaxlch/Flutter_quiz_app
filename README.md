@@ -1,16 +1,48 @@
-# quiz_game
+# Jeu de Quiz Interactif
 
-A new Flutter project.
+## Description du projet
 
-## Getting Started
+Ce projet consiste en un jeu de quiz interactif développé avec **Flutter** et **Firebase**. L'application permet à l'utilisateur de répondre à des questions de manière fluide et dynamique, avec un système de score en temps réel et un chronomètre. Les questions sont récupérées dynamiquement via une base de données Firebase Realtime Database.
 
-This project is a starting point for a Flutter application.
+### Fonctionnalités principales :
+- **Démarrage du quiz** : L'utilisateur peut commencer une partie en appuyant sur le bouton "Commencer".
+- **Chronomètre** : Le jeu dispose d'un compte à rebours qui limite la durée de chaque quiz.
+- **Système de score en temps réel** : Le score est mis à jour au fur et à mesure que l'utilisateur répond aux questions.
+- **Effet de confettis** : À la fin du quiz, un effet de confettis se déclenche pour célébrer la fin du jeu.
+- **Page de crédits** : Une page dédiée pour afficher les informations sur l'équipe de développement.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Prérequis
+Avant de pouvoir exécuter le projet, assurez-vous d'avoir installé les outils suivants :
+- [Flutter](https://flutter.dev/docs/get-started/install)
+- [Android Studio](https://developer.android.com/studio)
+- Un appareil Android ou un émulateur pour tester l'application
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Étapes d'installation
+1. Clonez ce repository sur votre machine locale :
+
+   ```bash
+   git clone https://github.com/syphaxlch/flutter_quiz_app.git
+   cd flutter_quiz_app
+   ```
+2. Installez les dépendances Flutter nécessaires :
+
+   ```bash
+   flutter pub get
+   ```
+3. Configurez Firebase en suivant [la documentation officielle de Firebase](https://firebase.flutter.dev/docs/overview).
+   - Créez un projet Firebase dans la console Firebase.
+   - Activez Firebase Realtime Database.
+   - Ajoutez les fichiers de configuration Firebase à votre projet Flutter (fichier `google-services.json` pour Android).
+
+4. Assurez-vous que votre appareil ou émulateur Android est prêt à tester l'application.
+
+5. Exécutez l'application sur votre appareil ou émulateur Android :
+
+   ```bash
+   flutter run
+   ```
+
+Auteurs
+- Syphax LAKHDARCHAOUCHE

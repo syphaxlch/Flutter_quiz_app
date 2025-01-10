@@ -2,8 +2,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'question.dart';
 
+// Remplacer l'URL
 class DBconnect {
-  final url = Uri.parse('https://quizgame-f6170-default-rtdb.firebaseio.com/questions.json');
+  final url = Uri.parse('https://quizgame-XXXX-default-rtdb.firebaseio.com/questions.json');
 
   // Récupérer les questions depuis Firebase
   Future<List<Question>> fetchQuestions() async {

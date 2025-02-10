@@ -11,6 +11,10 @@ Ce projet consiste en un jeu de quiz interactif développé avec **Flutter** et 
 - **Effet de confettis** : À la fin du quiz, un effet de confettis se déclenche pour célébrer la fin du jeu.
 - **Page de crédits** : Une page dédiée pour afficher les informations sur l'équipe de développement.
 
+![firebase](https://github.com/user-attachments/assets/d0ff6ccd-ed07-46bd-b58e-e9fc8942a290)
+
+![quiz-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/861addde-552f-4bd9-a879-a5375855fc09)
+
 ## Installation
 
 ### Prérequis
